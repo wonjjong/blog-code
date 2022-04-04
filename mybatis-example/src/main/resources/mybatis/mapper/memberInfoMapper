@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wonjjong.mybatisExample.hello.member.mapper.MemberMapper">
+    <select id="selectTotalMemberList" resultType="wonjjong.mybatisExample.hello.member.vo.MemberInfoVO">
+        SELECT
+        EMP_NO
+        , BIRTH_DATE
+        , FIRST_NAME
+        , LAST_NAME
+        , GENDER
+        , HIRE_DATE
+        FROM
+        EMPLOYEES;
+    </select>
+</mapper>
