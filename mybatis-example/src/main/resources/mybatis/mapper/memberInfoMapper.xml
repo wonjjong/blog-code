@@ -3,13 +3,14 @@
 <mapper namespace="wonjjong.mybatisExample.hello.member.mapper.MemberMapper">
     <select id="selectTotalMemberList" resultType="wonjjong.mybatisExample.hello.member.vo.MemberInfoVO">
         SELECT
-        EMP_NO
-        , BIRTH_DATE
-        , FIRST_NAME
-        , LAST_NAME
-        , GENDER
-        , HIRE_DATE
+           EMP_NO
+            , BIRTH_DATE
+            , FIRST_NAME
+            , LAST_NAME
+            , GENDER
+            , HIRE_DATE
         FROM
-        EMPLOYEES;
+            EMPLOYEES
+        LIMIT 10;
     </select>
 </mapper>
