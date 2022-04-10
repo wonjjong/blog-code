@@ -14,9 +14,14 @@ public class MemberRepository {
     @Autowired
     private SqlSession sqlSession;
 
-    public List<MemberInfoVO> selectTotalMemberList() {
-        MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
+    @Autowired
+    private MemberMapper memberMapper;
 
-        return mapper.selectTotalMemberList();
+    public List<MemberInfoVO> selectTotalMemberList() {
+        return memberMapper.selectTotalMemberList();
+    }
+
+    public List<MemberInfoVO> findMemberByName(String name) {
+        return memberMapper.findMemberByName(name);
     }
 }

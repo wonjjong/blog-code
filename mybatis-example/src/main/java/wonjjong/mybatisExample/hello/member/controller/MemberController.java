@@ -19,8 +19,12 @@ public class MemberController {
     private final MemberService memberService;
 
     @GetMapping("/memberList")
-    @ResponseBody
     public List<MemberInfoVO> memberList() {
         return memberService.selectTotalMemberList();
+    }
+
+    @GetMapping("memberList/{id}")
+    public List<MemberInfoVO> findMemberByName(String name){
+        return memberService.findMemberByName(name);
     }
 }

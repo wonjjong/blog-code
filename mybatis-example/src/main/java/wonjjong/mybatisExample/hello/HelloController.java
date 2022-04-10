@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/adk/index")
 public class HelloController {
 
-    @GetMapping("/")
-    @ResponseBody
+    @GetMapping("/test")
     public String index() {
-        return "index";
+        System.out.println("test requestMapping invoke");
+        return "test";
     }
 }

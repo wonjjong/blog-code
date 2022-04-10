@@ -16,4 +16,8 @@ public class MemberService {
     public List<MemberInfoVO> selectTotalMemberList() {
         return memberRepository.selectTotalMemberList();
     }
+
+    public List<MemberInfoVO> findMemberByName(String name) {
+        return memberRepository.findMemberByName(name);
+    }
 }

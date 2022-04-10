@@ -1,11 +1,13 @@
 spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/employees?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
-    dirverClassName: org.mysql.Driver
-    username: root
-    password: dnjswhdals1@
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+  profiles:
+    active: db_config
 
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+  type-aliases-package: wonjjong.mybatisExample.hello.member.vo
   mapper-locations: mybatis/mapper/*.xml
