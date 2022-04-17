@@ -20,4 +20,12 @@ public class MemberService {
     public List<MemberInfoVO> findMemberByName(String name) {
         return memberRepository.findMemberByName(name);
     }
+
+    public MemberInfoVO findMemberById(Integer id) {
+        return memberRepository.findMemberById(id);
+    }
+
+    public int getMemberListTotCnt() {
+        return memberRepository.getMemberListTotCnt();
+    }
 }

@@ -12,12 +12,14 @@
     <body>
         <h2> Hello World </h2>
 
-    <form name="testForm" id="testForm" method="post">
-        <input type="hidden" name="username" id="username" />
-        <input type="hidden" name="certNm" id="certNm"/>
+    <form name="testForm" id="testForm" method="post" >
+        <input type="hidden" name="username" id="username" value ="jongmin" />
+        <input type="hidden" name="certNm" id="certNm" value = "wonjjong"/>
 
+        <input type="text" id="cc" name="cc">
+        <input type="test" id="jumin" name="jumin">
         <div class="row">
-            <button class="btn" type="button"> 제출</button>
+            <button class="btn btn-danger"> 제출</button>
         </div>
     </form>
 

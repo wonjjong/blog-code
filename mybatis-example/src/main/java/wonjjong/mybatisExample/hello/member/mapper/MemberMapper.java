@@ -10,4 +10,7 @@ public interface MemberMapper {
    List<MemberInfoVO> selectTotalMemberList();
    List<MemberInfoVO> findMemberByName(String name);
 
+   MemberInfoVO findMemberById(Integer id);
+
+    int getMemberListTotCnt();
 }

@@ -15,7 +15,7 @@
         LIMIT 10;
     </select>
 
-    <select id="findMemberByName" parameterType="String">
+    <select id="findMemberByName" parameterType="String" resultType="MemberInfoVO">
         SELECT
             EMP_NO
             , BIRTH_DATE
@@ -28,5 +28,26 @@
             EMPLOYEES
         WHERE
             FULL_NAME = #{param1}
+    </select>
+
+    <select id="findMemberById" resultType="MemberInfoVO">
+        SELECT
+            EMP_NO
+             , BIRTH_DATE
+             , FIRST_NAME
+             , LAST_NAME
+             , GENDER
+             , HIRE_DATE
+             , FULL_NAME
+        FROM
+            EMPLOYEES
+        WHERE
+            EMP_NO = #{param1}
+    </select>
+    <select id="getMemberListTotCnt" resultType="int">
+            SELECT
+                COUNT(1)
+            FROM
+                EMPLOYEES
     </select>
 </mapper>
